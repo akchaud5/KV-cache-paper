@@ -4,3 +4,4 @@ reports/*.pt
 .pytest_cache/
 __pycache__/
 *.log
+src/adaptive_kv.egg-info/

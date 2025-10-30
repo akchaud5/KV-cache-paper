@@ -24,3 +24,24 @@
 |     0.7 |      3 |        2.95294 |             0.905143 |     0.883577 |
 |     0.7 |      4 |        2.84895 |             0.905143 |     0.889363 |
 
+## Benchmark Accuracy (Synthetic)
+
+| Config     | Dataset   | Task          |   Baseline |    Score |      Delta |
+|:-----------|:----------|:--------------|-----------:|---------:|-----------:|
+| baseline   | LongBench | multifield_qa |       0.62 | 0.62     |  0         |
+| baseline   | LongBench | narrative_qa  |       0.57 | 0.57     |  0         |
+| baseline   | LongBench | gov_report    |       0.44 | 0.44     |  0         |
+| baseline   | LongBench | math_facts    |       0.69 | 0.69     |  0         |
+| hybrid_12x | LongBench | multifield_qa |       0.62 | 0.591153 | -0.0288468 |
+| hybrid_12x | LongBench | narrative_qa  |       0.57 | 0.54348  | -0.0265204 |
+| hybrid_12x | LongBench | gov_report    |       0.44 | 0.419528 | -0.0204719 |
+| hybrid_12x | LongBench | math_facts    |       0.69 | 0.657896 | -0.0321037 |
+| hybrid_6x  | LongBench | multifield_qa |       0.62 | 0.548853 | -0.0711471 |
+| hybrid_6x  | LongBench | narrative_qa  |       0.57 | 0.504591 | -0.0654094 |
+| hybrid_6x  | LongBench | gov_report    |       0.44 | 0.389509 | -0.0504915 |
+| hybrid_6x  | LongBench | math_facts    |       0.69 | 0.61082  | -0.0791798 |
+| hybrid_8x  | LongBench | multifield_qa |       0.62 | 0.565287 | -0.0547125 |
+| hybrid_8x  | LongBench | narrative_qa  |       0.57 | 0.5197   | -0.0503002 |
+| hybrid_8x  | LongBench | gov_report    |       0.44 | 0.401172 | -0.0388283 |
+| hybrid_8x  | LongBench | math_facts    |       0.69 | 0.62911  | -0.0608898 |
+

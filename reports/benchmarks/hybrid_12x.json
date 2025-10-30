@@ -1,0 +1,19 @@
+{
+  "dataset": "LongBench",
+  "metric": "accuracy",
+  "baseline_scores": {
+    "multifield_qa": 0.62,
+    "narrative_qa": 0.57,
+    "gov_report": 0.44,
+    "math_facts": 0.69
+  },
+  "scores": {
+    "multifield_qa": 0.5911532154262066,
+    "narrative_qa": 0.5434795690208672,
+    "gov_report": 0.4195280883669853,
+    "math_facts": 0.6578963203936814
+  },
+  "compression_ratio": 3.4733860525418807,
+  "attention_coverage": 0.9591961070895195,
+  "key_cosine": 0.9212660789489746
+}

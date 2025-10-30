@@ -13,6 +13,7 @@ import pandas as pd
 
 DEFAULT_EVAL_PATH = Path("reports/latest_eval.json")
 DEFAULT_SWEEP_PATH = Path("reports/hyperparam_sweep.json")
+DEFAULT_BENCHMARK_DIR = Path("reports/benchmarks")
 
 
 def load_jsonl(path: Path) -> List[dict]:
@@ -99,6 +100,12 @@ def main() -> None:
         help="Path to hyperparameter sweep JSON file.",
     )
     parser.add_argument(
+        "--benchmark-dir",
+        type=Path,
+        default=DEFAULT_BENCHMARK_DIR,
+        help="Directory containing benchmark JSON reports.",
+    )
+    parser.add_argument(
         "--output",
         type=Path,
         default=Path("reports/benchmark_tables.md"),
@@ -115,6 +122,31 @@ def main() -> None:
     if args.sweep_path.exists():
         sweep = format_sweep(args.sweep_path)
         write_markdown(sweep, "Hyperparameter Sweep (Hybrid 8×)", args.output)
+
+    if args.benchmark_dir.exists():
+        rows = []
+        for path in sorted(args.benchmark_dir.glob("*.json")):
+            data = json.loads(path.read_text())
+            base_scores = data.get("baseline_scores", data.get("scores", {}))
+            scores = data.get("scores", base_scores)
+            dataset = data.get("dataset", "Benchmark")
+            name = path.stem
+            for task, base_score in base_scores.items():
+                task_score = scores.get(task, base_score)
+                delta = task_score - base_score
+                rows.append(
+                    {
+                        "Config": name,
+                        "Dataset": dataset,
+                        "Task": task,
+                        "Baseline": base_score,
+                        "Score": task_score,
+                        "Delta": delta,
+                    }
+                )
+        if rows:
+            benchmark_df = pd.DataFrame(rows)
+            write_markdown(benchmark_df, "Benchmark Accuracy (Synthetic)", args.output)
 
     print(f"Wrote benchmark tables to {args.output}")
 

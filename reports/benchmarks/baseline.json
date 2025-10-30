@@ -1,0 +1,10 @@
+{
+  "dataset": "LongBench",
+  "metric": "accuracy",
+  "scores": {
+    "multifield_qa": 0.62,
+    "narrative_qa": 0.57,
+    "gov_report": 0.44,
+    "math_facts": 0.69
+  }
+}

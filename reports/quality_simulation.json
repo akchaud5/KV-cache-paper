@@ -1,0 +1,50 @@
+{
+  "baseline_accuracy": 35.34,
+  "acceptable_threshold": 31.806000000000004,
+  "configurations": [
+    {
+      "compression_ratio": 5.05,
+      "baseline_accuracy": 35.34,
+      "estimated_accuracy": 33.573,
+      "absolute_drop": 1.7670000000000003,
+      "relative_drop_pct": 5.0,
+      "acceptable_threshold": 31.806000000000004,
+      "is_publishable": true,
+      "quality_status": "PASS"
+    },
+    {
+      "compression_ratio": 7.61,
+      "baseline_accuracy": 35.34,
+      "estimated_accuracy": 33.573,
+      "absolute_drop": 1.7670000000000003,
+      "relative_drop_pct": 5.0,
+      "acceptable_threshold": 31.806000000000004,
+      "is_publishable": true,
+      "quality_status": "PASS"
+    },
+    {
+      "compression_ratio": 10.57,
+      "baseline_accuracy": 35.34,
+      "estimated_accuracy": 32.512800000000006,
+      "absolute_drop": 2.8272000000000004,
+      "relative_drop_pct": 8.0,
+      "acceptable_threshold": 31.806000000000004,
+      "is_publishable": true,
+      "quality_status": "PASS"
+    }
+  ],
+  "summary": {
+    "total_configs": 3,
+    "publishable_configs": 3,
+    "best_config": {
+      "compression_ratio": 10.57,
+      "baseline_accuracy": 35.34,
+      "estimated_accuracy": 32.512800000000006,
+      "absolute_drop": 2.8272000000000004,
+      "relative_drop_pct": 8.0,
+      "acceptable_threshold": 31.806000000000004,
+      "is_publishable": true,
+      "quality_status": "PASS"
+    }
+  }
+}

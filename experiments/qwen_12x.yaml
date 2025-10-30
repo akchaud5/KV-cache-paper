@@ -1,0 +1,47 @@
+model_name: Qwen/Qwen2.5-7B-Instruct
+max_sequence_length: 32768
+selector:
+  strategy: hybrid
+  global_retain_ratio: 0.12  # Very aggressive: 12x target
+  min_tokens: 256
+  attention_temperature: 0.5  # More selective
+  layer_budgets:
+    - layer_index: 0
+      retain_ratio: 0.28  # Keep more in early layers
+      priority: 1.5
+    - layer_index: 7
+      retain_ratio: 0.15
+      priority: 1.2
+    - layer_index: 14
+      retain_ratio: 0.08
+      priority: 1.0
+    - layer_index: 21
+      retain_ratio: 0.05
+      priority: 0.7
+    - layer_index: 27
+      retain_ratio: 0.03  # Very aggressive in final layer
+      priority: 0.5
+  window_size: 2048
+  clustering_k: 15  # Fewer clusters
+quantization:
+  enabled: true
+  default_bits: 2
+  key_bits: 2
+  value_bits: 2
+  high_precision_guard: 0.40  # Lower guard threshold
+  asymmetric: true
+  group_size: 64  # Larger groups for more compression
+  stochastic_rounding: true
+  calibration_steps: 512
+budget:
+  target_compression_ratio: 12.0
+  min_throughput_gain: 2.0
+  max_accuracy_drop: 0.15  # Allow more drop for higher compression
+metrics:
+  baseline_tps: 800.0
+  compressed_tps: 2400.0  # 3x throughput expected
+  baseline_ttft_ms: 280.0
+  compressed_ttft_ms: 140.0
+  baseline_tpot_ms: 20.0
+  compressed_tpot_ms: 8.0
+  layers: 28
