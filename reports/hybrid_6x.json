@@ -1,0 +1,9 @@
+{
+  "memory_reduction": 6.001685043408184,
+  "original_mb": 12800.0,
+  "compressed_mb": 2132.734375,
+  "throughput_gain": 1.826086956521739,
+  "ttft_delta_ms": -80.0,
+  "tpot_delta_ms": -7.5,
+  "compression_ratio": 6.001685043408184
+}

@@ -1,0 +1,47 @@
+model_name: meta-llama/Meta-Llama-3-70B-Instruct
+max_sequence_length: 131072
+selector:
+  strategy: hybrid
+  global_retain_ratio: 0.42
+  min_tokens: 320
+  attention_temperature: 0.5
+  layer_budgets:
+    - layer_index: 0
+      retain_ratio: 0.38
+      priority: 1.6
+    - layer_index: 8
+      retain_ratio: 0.22
+      priority: 1.3
+    - layer_index: 16
+      retain_ratio: 0.16
+      priority: 1.0
+    - layer_index: 24
+      retain_ratio: 0.12
+      priority: 0.9
+    - layer_index: 31
+      retain_ratio: 0.08
+      priority: 0.7
+  window_size: 3328
+  clustering_k: 24
+quantization:
+  enabled: true
+  default_bits: 2
+  key_bits: 3
+  value_bits: 2
+  high_precision_guard: 0.55
+  asymmetric: true
+  group_size: 64
+  stochastic_rounding: true
+  calibration_steps: 1024
+budget:
+  target_compression_ratio: 12.0
+  min_throughput_gain: 2.8
+  max_accuracy_drop: 0.01
+metrics:
+  baseline_tps: 540.0
+  compressed_tps: 1680.0
+  baseline_ttft_ms: 460.0
+  compressed_ttft_ms: 300.0
+  baseline_tpot_ms: 32.0
+  compressed_tpot_ms: 18.0
+  layers: 48

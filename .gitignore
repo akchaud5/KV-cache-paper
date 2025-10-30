@@ -1,0 +1,6 @@
+artifacts/cache/
+artifacts/attn/
+reports/*.pt
+.pytest_cache/
+__pycache__/
+*.log

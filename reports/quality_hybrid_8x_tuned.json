@@ -1,0 +1,14 @@
+{
+  "key_mse": 0.5922150611877441,
+  "value_mse": 0.5922343730926514,
+  "key_cosine": 0.6402764320373535,
+  "value_cosine": 0.6402781009674072,
+  "key_cosine_selected": 0.9988888502120972,
+  "value_cosine_selected": 0.9988887310028076,
+  "attention_coverage": 0.46842640936374663,
+  "selected_fraction": 0.4087066650390625,
+  "high_precision_fraction": 0.5499645323875303,
+  "config": "hybrid_8x.yaml",
+  "cache_path": "artifacts/cache/prefill_cache.pt",
+  "attention_path": "artifacts/attn/prefill_attn.pt"
+}

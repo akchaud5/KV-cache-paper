@@ -1,0 +1,110 @@
+[
+  {
+    "guard": 0.4,
+    "bits": 2,
+    "compression_ratio": 4.677202731448998,
+    "key_cosine": 0.8763502836227417,
+    "attention_coverage": 0.9051431536674499,
+    "selected_fraction": 0.79110107421875,
+    "config": "meta-llama/Llama-2-13b-hf"
+  },
+  {
+    "guard": 0.4,
+    "bits": 3,
+    "compression_ratio": 4.545795844615714,
+    "key_cosine": 0.8763494491577148,
+    "attention_coverage": 0.9051431536674499,
+    "selected_fraction": 0.79110107421875,
+    "config": "meta-llama/Llama-2-13b-hf"
+  },
+  {
+    "guard": 0.4,
+    "bits": 4,
+    "compression_ratio": 4.30395500076345,
+    "key_cosine": 0.8877395391464233,
+    "attention_coverage": 0.9051431536674499,
+    "selected_fraction": 0.79110107421875,
+    "config": "meta-llama/Llama-2-13b-hf"
+  },
+  {
+    "guard": 0.5,
+    "bits": 2,
+    "compression_ratio": 3.946716972212384,
+    "key_cosine": 0.8787393569946289,
+    "attention_coverage": 0.9051431536674499,
+    "selected_fraction": 0.79110107421875,
+    "config": "meta-llama/Llama-2-13b-hf"
+  },
+  {
+    "guard": 0.5,
+    "bits": 3,
+    "compression_ratio": 3.852738681632164,
+    "key_cosine": 0.8787396550178528,
+    "attention_coverage": 0.9051431536674499,
+    "selected_fraction": 0.79110107421875,
+    "config": "meta-llama/Llama-2-13b-hf"
+  },
+  {
+    "guard": 0.5,
+    "bits": 4,
+    "compression_ratio": 3.6775984725306636,
+    "key_cosine": 0.8882800340652466,
+    "attention_coverage": 0.9051431536674499,
+    "selected_fraction": 0.79110107421875,
+    "config": "meta-llama/Llama-2-13b-hf"
+  },
+  {
+    "guard": 0.6,
+    "bits": 2,
+    "compression_ratio": 3.4141524187280607,
+    "key_cosine": 0.8811458349227905,
+    "attention_coverage": 0.9051431536674499,
+    "selected_fraction": 0.79110107421875,
+    "config": "meta-llama/Llama-2-13b-hf"
+  },
+  {
+    "guard": 0.6,
+    "bits": 3,
+    "compression_ratio": 3.343598835485177,
+    "key_cosine": 0.8811458349227905,
+    "attention_coverage": 0.9051431536674499,
+    "selected_fraction": 0.79110107421875,
+    "config": "meta-llama/Llama-2-13b-hf"
+  },
+  {
+    "guard": 0.6,
+    "bits": 4,
+    "compression_ratio": 3.210892419474756,
+    "key_cosine": 0.8888206481933594,
+    "attention_coverage": 0.9051431536674499,
+    "selected_fraction": 0.79110107421875,
+    "config": "meta-llama/Llama-2-13b-hf"
+  },
+  {
+    "guard": 0.7,
+    "bits": 2,
+    "compression_ratio": 3.00783989641274,
+    "key_cosine": 0.8835762143135071,
+    "attention_coverage": 0.9051431536674499,
+    "selected_fraction": 0.79110107421875,
+    "config": "meta-llama/Llama-2-13b-hf"
+  },
+  {
+    "guard": 0.7,
+    "bits": 3,
+    "compression_ratio": 2.9529449865528945,
+    "key_cosine": 0.8835766911506653,
+    "attention_coverage": 0.9051431536674499,
+    "selected_fraction": 0.79110107421875,
+    "config": "meta-llama/Llama-2-13b-hf"
+  },
+  {
+    "guard": 0.7,
+    "bits": 4,
+    "compression_ratio": 2.848954671077585,
+    "key_cosine": 0.8893629908561707,
+    "attention_coverage": 0.9051431536674499,
+    "selected_fraction": 0.79110107421875,
+    "config": "meta-llama/Llama-2-13b-hf"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "key_mse": 0.12823709845542908,
+  "value_mse": 0.12823566794395447,
+  "key_cosine": 0.9343482851982117,
+  "value_cosine": 0.9343557357788086,
+  "key_cosine_selected": 0.9999996423721313,
+  "value_cosine_selected": 0.9999996423721313,
+  "attention_coverage": 0.969328498840332,
+  "selected_fraction": 0.87176513671875,
+  "high_precision_fraction": 1.0,
+  "config": "baseline_full.yaml",
+  "cache_path": "artifacts/cache/prefill_cache.pt",
+  "attention_path": "artifacts/attn/prefill_attn.pt"
+}

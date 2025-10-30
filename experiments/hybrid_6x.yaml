@@ -1,0 +1,44 @@
+model_name: meta-llama/Llama-2-13b-hf
+max_sequence_length: 65536
+selector:
+  strategy: hybrid
+  global_retain_ratio: 0.36
+  min_tokens: 256
+  attention_temperature: 0.65
+  layer_budgets:
+    - layer_index: 0
+      retain_ratio: 0.52
+      priority: 1.5
+    - layer_index: 7
+      retain_ratio: 0.34
+      priority: 1.2
+    - layer_index: 15
+      retain_ratio: 0.22
+      priority: 1.0
+    - layer_index: 23
+      retain_ratio: 0.16
+      priority: 0.9
+  window_size: 2048
+  clustering_k: 18
+quantization:
+  enabled: true
+  default_bits: 4
+  key_bits: 4
+  value_bits: 3
+  high_precision_guard: 0.48
+  asymmetric: true
+  group_size: 16
+  stochastic_rounding: true
+  calibration_steps: 512
+budget:
+  target_compression_ratio: 6.0
+  min_throughput_gain: 1.8
+  max_accuracy_drop: 0.01
+metrics:
+  baseline_tps: 920.0
+  compressed_tps: 1680.0
+  baseline_ttft_ms: 340.0
+  compressed_ttft_ms: 260.0
+  baseline_tpot_ms: 24.0
+  compressed_tpot_ms: 16.5
+  layers: 40
