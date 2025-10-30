@@ -29,3 +29,10 @@ Guard/bit combinations show the trade-off between compression and coverage.
 - System specs recorded in `reports/system_specs.txt`.
 - Commands to regenerate experiments: `reports/repro_commands.sh`.
 - Evaluation outputs live under `reports/` (JSON + tables).
+- Paper tables exported via `scripts/generate_benchmark_tables.py` → `reports/benchmark_tables.md`.
+
+## Benchmarking Workflow
+1. Generate benchmark prompts (LongBench/RULER) and run the baseline model to capture accuracy metrics (store under `reports/benchmarks/baseline/*.json`).
+2. Replay the prompts using compressed configs (hybrid 6× / 8× / 12×) and save metrics to `reports/benchmarks/{hybrid_6x,hybrid_8x,hybrid_12x}/*.json`.
+3. Use `scripts/generate_benchmark_tables.py --eval-path reports/latest_eval.json` to refresh summary tables, then extend the script with benchmark metrics once available.
+4. Update the MLSys draft with both proxy metrics (coverage/cosine) and benchmark accuracy deltas to justify compression choices.
